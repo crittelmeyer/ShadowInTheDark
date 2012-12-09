@@ -1,14 +1,14 @@
 @echo off
 
 :: Path to impact.js and your game's main .js
-SET IMPACT_LIBRARY=lib/impact/impact.js
-SET GAME=lib/game/main.js
+SET IMPACT_LIBRARY=public/js/lib/impact/impact.js
+SET GAME=public/js/game/main.js
 
 :: Output file
 SET OUTPUT_FILE=game.min.js
 
 
-:: Change CWD to Impact's base dir and bake!
+:: Change CWD to base dir and bake!
 cd ../
 php tools/bake.php %IMPACT_LIBRARY% %GAME% %OUTPUT_FILE%
 

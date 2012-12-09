@@ -27,6 +27,7 @@ app.configure('development', function(){
 
 //set up routes - so far just one
 app.get('/', routes.index);
+app.get('/index.html', routes.index);
 
 //start listening with server
 var server = http.createServer(app).listen(app.get('port'), function(){

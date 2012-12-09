@@ -1,7 +1,7 @@
 <?php
 if( count($argv) < 3 ) {
 	echo "Usage: bake.php <in...> <out>\n";
-	echo "e.g. bake.php lib/impact/impact.js lib/game/game.js mygame-baked.js\n";
+	echo "e.g. bake.php public/js/lib/impact/impact.js js/game/main.js mygame-baked.js\n";
 	die;
 }
 
@@ -17,7 +17,7 @@ class Baker {
 	const MINIFIED = 1;
 	const GZIPPED = 2;
 	
-	protected $base = 'lib/';
+	protected $base = 'public/js/lib/';
 	protected $format = 0;
 	protected $loaded = array();
 	protected $currentInput = 'Command Line';

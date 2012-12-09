@@ -5,9 +5,9 @@ ig.module(
 
 wm.config = {
 	project: {
-		'modulePath': 'lib/',
-		'entityFiles': 'lib/game/entities/*.js',
-		'levelPath': 'lib/game/levels/',
+		'modulePath': 'js/lib/',
+		'entityFiles': 'js/game/entities/*.js',
+		'levelPath': 'js/game/levels/',
 		'outputFormat': 'module', // 'module' or 'json'
 		'prettyPrint': false
 	},
@@ -58,14 +58,14 @@ wm.config = {
 	},
 	
 	'collisionTiles': {
-		'path': 'lib/weltmeister/collisiontiles-64.png',
+		'path': 'weltmeister/collisiontiles-64.png',
 		'tilesize': 64
 	},
 	
 	'api': {
-		'save': 'lib/weltmeister/api/save.php',
-		'browse': 'lib/weltmeister/api/browse.php',
-		'glob': 'lib/weltmeister/api/glob.php'
+		'save': 'weltmeister/api/save.php',
+		'browse': 'weltmeister/api/browse.php',
+		'glob': 'weltmeister/api/glob.php'
 	}
 };
 

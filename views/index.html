@@ -84,10 +84,10 @@
 		#divPaused { font-weight: bold; font-size:70px; color: #fff; position: absolute; top: 50%; left: 50%; height: 50px; width: 200px; margin-top: -25px; margin-left: -100px; }
 		.dn { display: none; }
 	</style>
-
-	<script type="text/javascript" src="lib/impact/impact.js"></script>
-	<script type="text/javascript" src="lib/game/main.js"></script>
-	<script type="text/javascript" src="lib/jquery-1.7.2.min.js"></script>
+<!-- can u remove call to impact/impact.js below since impact.impact is already required in impact/game.js? -->
+	<script type="text/javascript" src="js/lib/impact/impact.js"></script>
+	<script type="text/javascript" src="js/game/main.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-1.7.2.min.js"></script>
 </head>
 <body id="body">
 	<div id="divPlayerPanel">
@@ -129,15 +129,14 @@
 <script type="text/javascript">
 	$(function() {
 		$('#body').keydown(function(e) {
-		if ($('#hdnPaused').val() == '1') {
-			if (e.which == 27) {
-				$('#hdnPaused').val('0');
-				$('#divPaused').addClass('dn');
-				ig.system.startRunLoop.call(ig.system);
+			if ($('#hdnPaused').val() == '1') {
+				if (e.which == 27) {
+					$('#hdnPaused').val('0');
+					$('#divPaused').addClass('dn');
+					ig.system.startRunLoop.call(ig.system);
+				}
 			}
-		}
-	});
-alert('did it');
+		});
 	});
 	
 </script>

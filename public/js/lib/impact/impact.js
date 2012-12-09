@@ -81,7 +81,7 @@ window.ig = {
 	baked: false,
 	nocache: '',
 	ua: {},
-	lib: 'lib/',
+	lib: 'js/lib/',
 	
 	_current: null,
 	_loadQueue: [],
@@ -217,7 +217,8 @@ window.ig = {
 		ig.modules[name] = {name: name, requires:[], loaded: false, body: null};
 		ig._waitForOnload++;
 		
-		var path = ig.lib + name.replace(/\./g, '/') + '.js' + ig.nocache;
+
+		var path = (name.indexOf('game') == 0 ? 'js/' : ig.lib) + name.replace(/\./g, '/') + '.js' + ig.nocache;
 		var script = ig.$new('script');
 		script.type = 'text/javascript';
 		script.src = path;
